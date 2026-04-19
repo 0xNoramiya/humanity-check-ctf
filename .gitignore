@@ -1,0 +1,13 @@
+.venv/
+venv/
+.env
+__pycache__/
+*.pyc
+*.pyo
+runs/
+recon/
+cookies.txt
+login.html
+verify.html
+.DS_Store
+
