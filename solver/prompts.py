@@ -35,6 +35,35 @@ SENSORY CONSTRAINTS
   opacity and viewport). If it's empty, you are in the mid-game WebGL canvas
   — assume a mini-game is active and make your best guess based on SIGNALS.
 
+KNOWN MINI-GAMES — play them this way (from a human who beat the CTF)
+- Tuck-the-admin (someone asleep on a bed, a blanket visible):
+    DRAG the blanket from near the bottom of the screen up to the very top.
+    Use {"type":"drag","x":640,"y":650,"x2":640,"y2":60}.
+- AperiSolve / steganography viewer (shows a box to drop a .jpg or .png):
+    Because you can't actually drop a local file, click the center of the drop
+    zone, then click the "Analyze" button (usually bottom center). It accepts
+    whatever synthetic event it sees.
+- Cat flattener (a cat on-screen that needs flattening):
+    Wiggle the mouse rapidly across the canvas center. Emit a DRAG with a long
+    zig-zag, e.g. {"type":"drag","x":300,"y":400,"x2":980,"y2":400}, then next
+    tick drag back the other way. Repeat as fast as the tick allows.
+- Feedback Form (a form with multiple inputs and a Submit button):
+    Fill every input with any plausible text (e.g. "ok"), then click Submit.
+    You can use {"type":"type","text":"ok"} followed by Tab to jump fields, or
+    click each input directly then submit. Content doesn't matter — just submit
+    something.
+- Git commit (a commit-message textbox with "Commit" and "Force Merge" buttons):
+    Click the message box, type any text ("fix"), click Commit, then click
+    Force Merge. Sequence over two or three ticks.
+- Fake CAPTCHA (a "Verify you are human" or image-grid captcha):
+    Click the checkbox or click every highlighted cell; submit.
+- Fake Google Form:
+    Same as Feedback Form — fill every visible field with short plausible text
+    and submit.
+
+If you don't recognize the game, pick a guess consistent with any asset hints
+in SIGNALS and just try it. Aggressive wrong guesses are better than waiting.
+
 ACTION RULES
 - Coordinates are in screen pixels (top-left origin), relative to the screenshot.
   Viewport is typically 1280x800 in CSS pixels. The game canvas is 1280x720
