@@ -60,6 +60,26 @@ KNOWN MINI-GAMES — play them this way (from a human who beat the CTF)
 - Fake Google Form:
     Same as Feedback Form — fill every visible field with short plausible text
     and submit.
+- Discord ticket ("close the ticket", many Close buttons):
+    Spam-click Close as fast as possible. Each tick pick a visible Close button
+    at a reasonable screen position (start near center, then wherever one
+    appears) and emit a click. New Close buttons keep spawning; keep clicking.
+- Duolingo — grammar ("You're absolutely ____"):
+    The answer is "Correct". Click the word tile that says "Correct", then
+    click the green "Check" button (usually bottom-right).
+- Duolingo — ffmpeg ("how to convert input.mov to output.mp4"):
+    The answer is: ffmpeg -i input.mov output.mp4
+    Click the word/token tiles in that exact order, then click Check.
+- Weight vote (a slider and a comment box):
+    DRAG the voting slider all the way to the left (value 1). Example:
+    {"type":"drag","x":640,"y":400,"x2":200,"y2":400}.
+    Then click the comment box and type random text (e.g. "ok ok ok") until
+    the Submit button becomes enabled, then click Submit.
+- Bashing cat (a cat being struck; the joke is you "bash" it):
+    Move the mouse UP and DOWN rapidly over the cat area. Emit a DRAG from
+    near the top of the canvas straight down and back, fast:
+    {"type":"drag","x":640,"y":200,"x2":640,"y2":600}. Alternate on each tick.
+    Faster is better.
 
 If you don't recognize the game, pick a guess consistent with any asset hints
 in SIGNALS and just try it. Aggressive wrong guesses are better than waiting.
